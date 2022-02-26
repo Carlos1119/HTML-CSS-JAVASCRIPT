@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@font-face{
+	font-family:'fontelogo';/*tipo ds fonte*/
+	src: url("../_fonts/bubblegum-sans-regular.otf");/*adicionar uma nova fonte*/
+}
+/*Formatação do corpo do site*/
+body{
+	font-family:arial, sans-serif;/*tipo da fonte*/
+	background-color: #dddddd;/*Colorir o fundo do site(cinza claro)*/
+	color:black;/*Colorir a letra*/
+}
+	
+	
+/*Formatação da interface*/	
+div#interface{
+	width:950px;/*Largura da interface*/
+	background-color:white;/*Colorir a fundo da interface*/
+	margin: -20px auto 0px auto;/*margem da interface(cima,direita,baixo,esquerda )(centralizar)*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);/*Sombra em volta da interface(lateral vertical espalhamento cor*/
+	padding: 10px;/*ajustar a margem interna da interface*/
+}
+		
+	
+/*Formatação dos paragrafos*/	
+p{
+	text-align:justify;/*Colocar o paragrafo justificado*/
+	text-indent:50px;/*Colocar o paagrafo com uma margem de ponto paragrafo*/
+}
+
+
+/*Formatar o link*/
+a{
+	color:#606060;/*cor do link*/
+	text-decoration:none;/*retirar o sublinhado dos links*/
+}
+a:hover{
+	text-decoration:underline;/*efeito de passar o mouse e ficar sublinhado*/
+}
+
+	
+/*formatar imagem do cabeçalho*/
+header#cabecalho img#icone{
+	position:absolute;/*A imagem em qualquer parte do site*/
+	left:850px;/*Posicionar a esquerda do site*/
+	top:40px;/*Posicionar a altura*/
+}
+
+
+/*Formata o cabeçalho*/	
+header#cabecalho{
+	border-bottom: 1px #606060 solid;/*borda do cabeçalho(largura, cor, */
+	height: 150px;/*altura do cabeçalho*/
+	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px;/*Sair da pasta _css, entar na pasta imagens imagens e aplicar uma imagem(aplicar uma imagem),(não repetir a imagens e deslocamento lateral e horizontal da mesma)*/	
+}	
+header#cabecalho h1{
+	font-family: 'fontelogo';/*Tipo da fonte*/
+	font-size: 30pt;/*Tamanho da fonte*/
+	color:#606060;/*Cor da fonte*/
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);/*sombra na fonte( horizontal vertical espalhamento cor*/
+	padding:0px;/*espaço interno*/
+	margin-bottom:0px;/*ajustar apenas a maegem de baixo da palavra(magem externa)*/
+}
+header#cabecalho h2{
+	font-family: 'Titillium Web', sans-serif;/*Tipo da fonte*/
+	font-size: 15pt;/*Tamanho da fonte*/
+	color:#888888;/*Cor da fonte*/
+	padding: 0px;/*espaço interno*/
+	margin-top: 0px;/*ajustar apenas a maegem de de cima da palavra(magem externa)*/
+}
+	
+	
+/*formatação de imagens com legendas*/
+figure.foto-legenda {
+	position:relative;/*posição da imagem dentro da interface*/
+	border:2px solid white;/*Borda da imagem tamanho,tipo sólida, branca */
+	box-shadow:1px 1px 4px black;/*Sombra em volta da imagem(lateral vertical espalhamento cor*/
+}
+figure.foto-legenda img{
+	width:100%;/*largura da imagem*/
+	height:100%;/*Comprimento da imagem*/
+}
+figure.foto-legenda figcaption{
+	opacity:0;/*Não escurecer a imagem*/
+	position:absolute;/*posição da legenda em qualquer lugar*/
+	top:0px;/*Posição da legenda e plano de fundo no topo da imagem*/
+	background-color:rgba(0,0,0,.4);/*Cor de fundo da imagem*/
+	color:white;/*Cor da legenda*/
+	width:100%;/*Tamanho da largura da legenda*/
+	height:100%;/*Tamanho do comprimento da legenda*/
+	padding:10px;/*Distancia da margem até a legenda*/
+	box-sizing:border-box;/*ajusta a cor de fundo da imagem*/
+	transition:opacity 1s;/* segundos da transitividade do efeito da imagem*/
+}
+figure.foto-legenda:hover figcaption{
+	opacity: 1;/*Mover o mouse por cima da foto */ 
+}
+
+
+/* Formatção do menu*/
+nav#menu{
+	display:block;
+}
+nav#menu ol{
+	list-style:none;/*tirar a ordem do menu*/
+	text-transform: uppercase;/*Colocar o menu em maiúsculo*/
+	position: absolute;/*posicionar o menu em qualquer lugar*/
+	top: -20px;/*Colocar no topo do site*/
+	left: 700px	;/*Alinhar à esquerda*/
+}
+nav#menu li{
+	display:inline-block;/*Colocar o menu em linha*/
+	background-color: #dddddd;/*Colocar o plano de fundo do menu em cinza*/
+	padding: 2px;/*diminuir o tamanho do menu(margem)*/
+	margin: 2px;/*Distancia de um menu para o outro*/
+	transition: background-color 1s;/*Colocar o efeito de transição*/
+}
+nav#menu li:hover{
+	background-color: #606060;/*Colocar o efeito quando passar o mouse (cinza)*/
+}
+nav#menu a{
+	color: #000000;/*Colorir o menu de preto*/
+	text-decoration:none;	/*Tirar o sublinhado*/
+}
+nav#menu a:hover{
+	color:#ffffff;	/*Colorir o link para branco*/
+	text-decoration:underline;/*Colocar sublinhado quando passar o mouse*/
+}
+nav#menu h1{
+	display:none;/*Tirar o título(menu principal) da interface*/
+}
+
+
+/*Formatação da lateral esquerda*/
+section#corpo{
+	display:block;/*Ser mostrada como um bloco*/
+	width: 510px;/*Largura do lado esquerdo*/
+	float: left;/*Flutuar no lado esquerdo*/
+	border-right: 1px solid #606060;/*borda do lado direito(espessura tipo cor)*/
+	padding-right: 12px; /*Distância da margem interna*/
+}
+
+
+/*Formatação do artigo*/
+article#artigo h2{
+	font-size: 13pt;/*tamanho da fonte*/
+	color:#606060;/*cor cinza*/
+	background-color:#dddddd;/*cor de fundo*/
+	padding: 5px 0px 5px 10px;/*margem interna (cima direita baixo esquerda)*/
+	margin: 10px opx 10px 0px;/*magem externa (cima direita baixo esquerda)*/
+}
+
+
+/*Formatação do cabeçalho do artigo*/
+header#cabecalho-artigo h1{
+	font-family:'fontelogo', sans-serif;/*tipo de fonte*/
+	font-size: 20pt;/*tamanho da fonte*/
+	color:#606060;/*cor da fonte*/
+	margin-bottom: 0px;/*margem externa de baixo*/
+	margin-top: opx;/*margem externa*/
+}
+header#cabecalho-artigo h2{
+	font-size: 13pt;/*tamanho da fonte*/
+	color:#cecece;/*cor da fonte*/
+	background-color:#ffffff;/*plano de fundo*/
+	margin:opx;/*margem externa*/
+}
+header#cabecalho-artigo h3{
+	font-size: 10pt;/*tamanho da fonte*/
+	color:#606060;/*cor da fonte*/
+}
+.direita{
+	text-align:right;/*função da classe*/
+}
+
+
+/*Formatação da tabela*/
+table#tabela{
+	border: 1px solid #606060;/* borda da tabela (Espessura solida cinza escuro)*/	
+	border-spacing: 0px; /*Espaço entre as células*/ 
+	margin-left:auto;/*margem automatica à esquerda*/
+	margin-right:auto;/*margem automatica à direita*/
+}
+table#tabela td{
+	border: 1px solid #606060;/* borda da tabela das células (Espessura solida cinza escuro)*/	
+	padding: 10px;/*espaço da margem interna*/
+	text-align:center;/*alinhar no centro*/
+}
+table#tabela td.ce{
+	color:#ffffff;/*Cor da fonte(branco)*/
+	background:#606060;/*cor do fundo(cinza escuro)*/
+	vertical-align:center;/*alinhamento da palavra*/
+	font-weight:bold;/*tipo da fonte*/
+}
+table#tabela td.cd{
+	background-color:#cecece;/*cor de fundo(cinza claro)*/
+}
+table#tabela caption{
+	color: #888888;/*cor de fonte(cinza)*/
+	font-size: 15pt;/*tamanho da fonte*/
+	font-weight:bolder;/*tipo da fonte*/
+}
+table#tabela caption span{
+	display:bloco;/*função de flutuar no site*/
+	float:right;/*flutuação à direita*/
+	color: #000000;/*cor preta*/
+	font-size: 8pt;/*tamanho da fonte*/
+	margin-top: 10px;/*margem do topo*/
+}
+
+
+/*Formatação da lateral direita*/
+aside#lateral{
+	display: block;/*Ser mostrada como um bloco*/
+	width:400px;/*Largura do lado esquerdo*/
+	float:right;/*Flutuar no lado direito*/
+	background-color:#dddddd;/*cor do fundo*/
+	padding:10px;/*margem interna*/
+	margin-top: 12;/*topo da margem externa*/
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);/*sombra na lateral direita( lateral vertica espalhamento cor*/
+}
+aside#lateral h1{
+	font-family: 'fontelogo', sans serif;/*tipo de fonte*/
+	font-size: 14pt;/*tamanho da fonte*/
+	color:#606060;/*cor da fonte*/
+	margin-top: 0px;/*margem externa no topo*/
+}
+aside#lateral h2{
+	background-color: #606060;/*cor do plano de fundo*/
+	font-size:13 pt;/*tamanho da fonte*/
+	color:white;/*cor da letra*/
+	padding: 5px;/*margem externa*/
+}
+
+
+/*Configuração do rodapé*/
+footer#rodape{
+	clear:both;/*Mostrat o contúdo fora da divisão esquerda direita*/
+	border-top: 1px solid #606060;/*borda em cima (espessura tipo cor)*/
+}
+footer#rodape p{
+	text-align:center;/*Centralizar o paragrafo*/
+}
